@@ -1,0 +1,34 @@
+＃モジュールの名前　　目的　　使い方
+1,string-     値を文字列で置き換える方法を提供するtemplateクラス　　str()
+2,re          正規表現操作　　　　　　　　　　　　　　　　　　　　import re
+3,difflib      シーケンスを比較するためのクラスや関数を提供する　　　　difflib.ndiff
+                                                            print(file.etc(diff),end="")
+4,struct      pythonの値とpython bytesオブジェクトとして表されるCの構造体データをの間の変換をする
+                                                            from struct import*
+5,datetime 日付や時間データを簡単な方法と複雑な方法の両方で操作するためのクラスを提供する
+                                                     form deatetime import timedelta
+                                                     d = timedelata(microseconds =-1)
+                                                     (d.day, d.seconds,d.microseconds)
+6,calendar   calプログラムのようなカレンダー出力を行い、それに加えてカレンダーに関する有益な関数群をていきょうします
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　import calendar
+7,unicodedata   全てのユニコードの文字の文字プロパティを定義するユニコードもじデータベースへのアクセスを提供する
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　import unicodedata
+                                                     unicodedata.lookup('LEFT CURLY BRACKET')
+                                                     '{'
+8,COPY    PYTHONにおいて代入文はオブジェクトをコピーしません代入はターゲットとオブジェクトの間に束縛を作ります
+　　　　　　　ミュータブルなコレクションまたはミュータブルなアイテムを含むコレクションについては、元のオブジェクトを
+　　　　　　　変更せずにコピーを変更できるように、コピーが必要になることが時々あります
+                                                    copy(x)浅い
+                                                    deepcopy(x)深い
+9,math    標準Cで定義されている数学関数にアクセスすることができる
+                                                    log(z[,base]) xの自然対数を返す
+                                                    degrees(x)角ｘをラジアンから度に変換します
+                                                    radians(x)角ｘを度からラジアンに変換します
+10,rlcompleter GNU readline向け補完関数　　rlcompleterモジュールではpythonの識別子やキーワードを定義したreadline
+                                         が利用できるときには、completrクラスのいんすたんすが自動的に作成され、
+                                         complete()メソッドがreadline補完に設定されます
+                                         import rlcompleter
+                                         impoet readline
+                                         readline.parse_and_bind("tab:complete")
+                                         readline.<TAB PRESSED>
+                                         READLINE._DOC_ .......
