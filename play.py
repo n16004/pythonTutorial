@@ -1,5 +1,5 @@
 
-HANDS = ("グー", "チョキ", "パー")
+HANDS = (" ", "グー", "チョキ", "パー")
 
 def selectHnad():
     """
@@ -8,7 +8,7 @@ def selectHnad():
     :return:　HANDSの中のいずれか。
     """
     import random
-    i = random.randint(0, 3)
+    i = random.randint(1, 4)
     return i
 
 def judgement(player, computer):
@@ -41,8 +41,6 @@ def judgement(player, computer):
 
 
 
-
-
 """def save_score(result):
 
     'score.txt'に戦績を保存。
@@ -51,13 +49,33 @@ def judgement(player, computer):
     :param result:
     :return: None
     """
+def save_score(result):
+
+    """result = judgement(player, computer)"""
+    if result == -1:
+        return "y"
+    elif result == 0:
+        return "z"
+    else:
+        return "x"
+    return None
+    """f = open("score.txt","w")
+    f.write()
+    f.close"""
+
+
+
 
 
 if __name__ == '__main__':
     player = int(input('グー(1)/チョキ（２）/パー(3)を選んでください: '))
     computer = selectHnad()
     result = judgement(player, computer)
-    #コンピュータの手と勝敗の結果を表示
-
+    #コンピュータの手と勝敗の結果を表
     print("computer", HANDS[computer])
     print(result)
+
+    score = save_score(result)
+    f = open("score.txt","a")
+    f.write(score)
+    f.close
