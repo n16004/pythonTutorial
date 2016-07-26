@@ -1,1 +1,2 @@
-xyxzyxx
+win:x lose:y draw:z
+xyxzyxxyxzx

@@ -60,6 +60,7 @@ def save_score(result):
     else:
         return "x"
     return None
+
     """f = open("score.txt","w")
     f.write()
     f.close"""
