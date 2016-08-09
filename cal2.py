@@ -1,15 +1,17 @@
+
+
 def cal(year, month=1, day=1):
+    """
+    年月日から曜日を計算します
+        曜日は0(日曜)から6(土曜)の数値で表現します
+    :param year: 西暦4桁
+    :param month: 月
+    :param day: 日
+    :return: 0-6(日曜-土曜)
+    """
     _year = year
     _month = month
     _day = day
-    """
-    年月日から曜日を計算します
-    曜日は０（日曜日）から６（土曜日）
-    ：param year:西暦４桁
-    :param month:月
-    :param　day:日
-    :return:０−６
-    """
 
     if month == 1 or month == 2:
         _year = year - 1
@@ -24,11 +26,10 @@ def cal(year, month=1, day=1):
 
     ee = aa + bb + cc + _day - dd - 429
     ff = ee // 7 * 7
+
     return (ee - ff + 1) % 7
 
 
-# 西暦を入力してもらい、その年のカレンダーを表示
-# year = int(input('西暦を入力してください:'))
 def is_leap_year(year):
     if year % 400 == 0:
         return True
@@ -39,13 +40,14 @@ def is_leap_year(year):
     return False
 
 
-y = int(input('西暦を入力してください：'))
+# 西暦を入力してもらい、その年のカレンダーを表示
+y = int(input('西暦(4桁)を入力してください: '))
 
 leap = is_leap_year(y)
 
 for m in range(1, 12 + 1):
     print(m, '月')
-    print("  日 月 火 水 木 金 土")
+    print("Sun Mon Tue Wed Thu Fri Sat")
     first = cal(y, m)
     w = first
     for d in range(1, 31 + 1):
@@ -55,11 +57,11 @@ for m in range(1, 12 + 1):
             break
 
         if d == 1:
-            print('   ' * first, end='')
-        print(' ' * (1 - d // 10), d, end='')
+            print('    ' * first, end='')
+        print(' ' * (1 - d // 10), d, end=' ')
         w += 1
         if w > 6:
             print()
             w = 0
 
-    print('/n')
+    print('\n')

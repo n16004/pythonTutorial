@@ -9,7 +9,7 @@ def selectHnad():
     :return:　HANDSの中のいずれか。
     """
     import random
-    i = random.randint(1, 4)
+    i = random.randint(1, 3)
     return i
 
 def judgement(player, computer):
@@ -42,7 +42,8 @@ def judgement(player, computer):
 
 
 
-"""def save_score(result):
+    """
+    def save_score(result):
 
     'score.txt'に戦績を保存。
     win:x lose:y drew:z のディクショナリデータを保存する。
@@ -79,5 +80,5 @@ if __name__ == '__main__':
 
     score = save_score(result)
     f = open("score.txt","a")
-    f.write(score)
+    f.write("-" + score)
     f.close
